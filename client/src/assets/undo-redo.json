@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Annuler/Refaire",
+        "description": "L’application permet d’annuler les dernières actions que l’utilisateur a exécutées. Dans ce contexte, une action signifie toute intervention de l’utilisateur menant à l’ajout, la suppression ou la modification d’objets.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "En activant la fonction annuler à répétition, l’utilisateur peut « reculer » dans l’état de son dessin, et ce jusqu’à en revenir à l’état de départ. Il est possible de refaire ce qui a été annulé. Dès qu’une nouvelle action (ajout, suppression, modification) est exécutée, la pile des actions annulées est supprimée. ",
+        "points": "",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Annuler-refaire ne tient pas compte du presse-papier sauf pour un détail : la valeur de décalage. Si une action annulée ou refaite comportait une modification de la valeur de décalage, celle-ci est appliquée à l’inverse.",
+        "points": "",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Ces outils sont accessible sur la barre d'outil. l'icon permettant d'annuler une action apparait une fois qu'un dessin se trouve sur la zone de dessin et l'icon permettant de refaire une action annuler apparait une fois q'une action a été annulé et disparait quand toutes les actions annulées ont été refaite. Les racourcis 'CTRL+Z' et 'CTRL+SHIFT+Z' permettent d'annuler et refaire une action respectivement",
+        "points": "",
+        "link": ""
+          
+    }
+]

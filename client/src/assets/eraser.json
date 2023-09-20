@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Efface",
+        "description": "Cet outil permet de supprimer des objets de la surface de dessin. Tout objet se trouvant en contact avec l’efface lors d’un clic gauche est effacé. L’objet effacé est toujours celui « sur le dessus de la pile » d’objets. Pour se servir de l’outil comme d’une brosse, il suffit de maintenir le bouton gauche enfoncé et de déplacer la souris. Tout objet touché pendant le mouvement sera alors supprimé.",
+        "points": "",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Pour aider l’utilisateur à bien voir ce qu’il s’apprête à effacer, une altération visuelle temporaire des objets survolés par l’efface a lieu. En effet, chaque objet se trouvant en contact avec l’image de l’efface (carré blanc) se fait ajouter un contour rouge. Si l’objet avait déjà un contour, via un attribut configurable, celui-ci est alors coloré en rouge et épaissi. L’altération visuelle d’un objet est éliminée dès que celui-ci n’est plus en contact avec l’efface. Le seule attribut configurable qu'il possède est la taille du carré de l'éfface en pixels. ",
+        "points": "",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Pour activer cet outil, on peut cliquer sur son icon sur la barre latérale ou en cliquant sur la touche 'E'.",
+        "points": "",
+        "link": ""
+          
+    }
+]

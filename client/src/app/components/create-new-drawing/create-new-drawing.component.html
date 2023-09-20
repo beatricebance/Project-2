@@ -1,0 +1,70 @@
+<form [formGroup]="drawingForm">
+
+      <h1 style="text-align: center;"> CREER UN NOUVEAU DESSIN</h1>
+      <div class="form-group">
+            <label for="height" [ngClass]="drawingForm.controls['height'].invalid ? 'text-danger' : ''">Hauteur</label>
+            <input type="number" formControlName="height"
+                  [ngClass]="drawingForm.controls['height'].invalid ? 'is-invalid' : ''" class="form-control"
+                  [value]=this.height (keydown)="collectData()">
+            <label class="text-danger" *ngIf="drawingForm.controls['height'].hasError('required')">
+                  la hauteur doit etre inscrite
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['height'].hasError('min')">
+                  la longueur minimale est 100
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['height'].hasError('max')">
+                  la longueur maximale est 5000
+            </label>
+            <br>
+      </div>
+      <div class="form-group">
+            <label [ngClass]="drawingForm.controls['width'].invalid ? 'text-danger' : ''">Largeur</label>
+            <input type="number" formControlName="width"
+                  [ngClass]="drawingForm.controls['width'].invalid ? 'is-invalid' : ''" class="form-control"
+                  [value]=this.width>
+            <label class="text-danger" *ngIf="drawingForm.controls['width'].hasError('required')">
+                  la largeur doit etre inscrite
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['width'].hasError('min')">
+                  la largeur minimale est 100
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['width'].hasError('max')">
+                  la largeur maximale est 5000
+            </label>
+            <br>
+      </div>
+      <div class="form-group">
+            <label [ngClass]="drawingForm.controls['colorHexa'].invalid ? 'text-danger' : ''">Couleur</label>
+            <input type="text" formControlName="colorHexa"
+                  [ngClass]="drawingForm.controls['colorHexa'].invalid ? 'is-invalid' : ''" class="form-control"
+                  [value]=this.colorHexa>
+            <label class="text-danger" *ngIf="drawingForm.controls['colorHexa'].hasError('maxlength')">
+                  La longueur maximale est 7
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['colorHexa'].hasError('minlength')">
+                  La longeur minimale est 7
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['colorHexa'].hasError('required')">
+                  Veuillez choisir la couleur
+            </label>
+            <label class="text-danger" *ngIf="drawingForm.controls['colorHexa'].hasError('pattern')">
+                  la couleur doit etre un code hexadecimal valide commencant par #
+            </label>
+            <br>
+            <button type="button" mat-raised-button (click)="openColorDialog()"
+                  style="float: left; margin-bottom: 5px;"> selecteur de couleur</button> <br><br>
+      </div>
+      <div [hidden]="this.viewDrawingParameter.isSpaceCreated">
+            <button class="btn btn-block btn-success" (click)="verifyDrawing()">Valider</button>
+            <button mat-dialog-close class="btn btn-block btn-danger">Annuler</button>
+      </div>
+
+      <div *ngIf="this.viewDrawingParameter.isSpaceCreated ">
+            <h1 style="color:red">
+                  <p>Voulez-vous tout supprimer sur la zone de dessin? </p>
+            </h1>
+            <button class="btn btn-block btn-success" (click)="send()">Valider Creation </button>
+            <button mat-dialog-close class="btn btn-block btn-danger">Annuler Creation</button>
+      </div>
+
+</form>

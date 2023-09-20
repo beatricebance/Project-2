@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Rectangle",
+        "description": "Cet outil permet de dessiner des rectangles. Pendant la première ou la deuxième étape de la création, si la touche Shift est maintenue appuyée, la forme à créer sera un carré plutôt que  rectangle. Pour acceder a cette forme on peut cliquer sur l'icon 'Formes' sur la barre latérale et choisir le rectangle. On peur aussi y acceder en cliquant sur la touche '1'.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "IL a comme attribut : ",
+        "points": "Épaisseur du trait de contour en pixels",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "Type de tracé: ",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Avec contour et intérieur",
+        "points": "",
+        "link": "../assets/rectangle1.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec contour seulement",
+        "points": "",
+        "link": "../assets/rectangle3.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec intérieur seulement",
+        "points": "",
+        "link": "../assets/rectangle2.png"
+          
+    }
+]

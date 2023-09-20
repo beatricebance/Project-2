@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Ellipse",
+        "description": "Cet outil adopte le même comportement que celui permettant de dessiner des rectangles. La seule différence est que la forme dessinée est une ellipse. Comme pour l’outil rectangle, l’utilisation de la touche Shift aura un effet. Ici, elle transformera l’ellipse en cercle. Pour acceder a cette forme on peut cliquer sur l'icon 'Formes' sur la barre latérale et choisir l'ellipse. On peur aussi y acceder en cliquant sur la touche '2'.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "IL a comme attribut : ",
+        "points": "Épaisseur du trait de contour en pixels",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "Type de tracé: ",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Avec contour et intérieur",
+        "points": "",
+        "link": "../assets/ellipse1.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec contour seulement",
+        "points": "",
+        "link": "../assets/ellipse3.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec intérieur seulement",
+        "points": "",
+        "link": "../assets/ellipse2.png"
+          
+    }
+]

@@ -1,0 +1,105 @@
+[
+    {
+        "name": "Selection",
+        "description": "Avec cet outil, l’utilisateur peut sélectionner un ou plusieurs objets de la surface de dessin. Il lui est ensuite possible de les déplacer, de changer leurs dimensions ou de les faire pivoter. Lorsqu’un objet est sélectionné, une boite englobante doit l’entourer. Cette dernière est un rectangle qui « encadre » l’objet sélectionné. La boite englobante possède quatre points de contrôles (un par côté) permettant d’effectuer des redimensionnements de l’objet sélectionné. On peut activer cet outil soit on cliquant sur son icon sur la barre latérale, soit an cliquant sur lla touche 'S' ",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "Lorsque plusieurs objets sont sélectionnés une seule boite qui encadre la totalité des objets sélectionnés est créée. La boite englobante est créé par le biais d'un rectangle de selection. Il s’agit d’une zone rectangulaire définie par l’utilisateur à l’aide d’un glisser-déposer de la même manière que l’on dessine des rectangles (outil rectangle). Il est créé par les étapes suivantes: ",
+        "points": "Le bouton gauche de la souris est enfoncé. La position du pointeur définit celle d’un premier coin du potentiel rectangle. « Potentiel », parce que si le bouton est relâché avant un déplacement, il s’agira d’un simple clic.",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "L’utilisateur déplace la souris. Le rectangle de sélection est officiellement créé. Il est représenté à l’écran par un cadre en pointillé",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Le bouton est relâché. Le rectangle de sélection n’ayant plus d’utilité, il disparait",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Il est aussi possible de créé un rectangle d'inversion de sélection. C'est une variante du rectangle de sélection  qui s’utilise avec le bouton droit de la souris. Son fonctionnement est similaire à celui du rectangle de sélection. La différence est que le rectangle ne définit pas une nouvelle sélection. Il modifie plutôt la sélection existante en inversant l’état de sélection de chaque objet qu’il touche. s’il n’y a pas de « sélection existante », le rectangle d’inversion de sélection aura donc un effet identique au rectangle de sélection",
+        "points": "",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Une sélection peut être déplacée de deux façons. Soit avec la souris, soit avec le clavier. Le déplacement via la souris s’effectue à l’aide d’un glisser-déposer avec le bouton gauche de la souris. Le déplacement subi par la sélection est identique à celui fait par le pointeur de la souris. Le déplacement via le clavier se fait à l’aide des touches directionnelles (les 4 flèches). À chaque fois qu’une touche directionnelle est appuyée, la sélection se déplace de 3 pixels dans la direction représentée par la touche. Si la touche est maintenue enfoncée, après un délai de 500 ms, une séquence de déplacement à répétition débutera. Le déplacement aura donc lieu à toutes les 100 ms jusqu’à ce que la touche soit relâchée.",
+        "points": "",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Pour faire pivoter une sélection, il suffit d’utiliser la roulette de la souris. Une sélection pivote autour de son centre. Autrement dit, elle pivote autour du centre de sa boite englobante. Si la touche Shift est maintenue enfoncée pendant la rotation, chaque objet pivotera individuellement sur lui-même (autour de son propre centre). À chaque cran de roulette, une rotation de 15 degrés est éffectuée. Si la touche ALT est enfoncée, la rotation est de 1 degré",
+        "points": "",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Le dernier point de la sélection est la section 'Manipulations de sélection et presse papier'. Cette section comprend 6 fonctions: ",
+        "points": "Couper: Lorsque couper est activé, tous les objets présentement sélectionnés sont transférés vers le presse-papier. Concrètement, ces objets disparaissent de la surface de dessin pour être stockés dans le presse-papier. Avant de réaliser ce transfert d’objets, le presse-papier est au préalable vidé.",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Coller: cette fonction crée une copie de chaque objet se trouvant dans le presse-papier et les ajoute à la surface de dessin. Chaque nouvel objet est identique en tout point à celui d’origine sauf pour sa position qui est légèrement décalée de l’originale. Le contenu du presse-papier n’est pas affecté par un collage. Quand un collage est effectué, une sélection est créée avec l’ensemble des objets collés. S’il y avait déjà des objets sélectionnés, ceux-ci deviennent non sélectionnés.",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Copier: est similaire à couper. La seule différence est que les objets copiés ne disparaissent pas de la surface de dessin. Ils sont seulement dupliqués dans le presse-papier. Avant de réaliser cette copie d’objets, le presse-papier est au préalable vidé. ",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Dupliquer: prend la sélection, en crée une copie, puis la colle sur la surface de dessin.",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Supprimer: Cette action retire les objets sélectionnés de la surface de dessin. Le contenu du presse-papier n’est pas affecté par une action de suppression.",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Tout sélectionner: permet de sélectionner tout les dessins sur la zone de dessins.",
+        "link": ""
+          
+    }
+
+]

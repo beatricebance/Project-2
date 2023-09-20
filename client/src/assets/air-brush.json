@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Aérosol",
+        "description": "Cet outil simule un effet de peinture en aérosol. Dès que le bouton est enfoncé, un jet de peinture est vaporisé sous le pointeur de la souris. L’outil continu ensuite d’émettre de la peinture à intervalle régulier jusqu’à qu’à ce que le bouton soit relâché. Pour plus de réalisme, le motif de vaporisation doit présenter de légères variations à chaque fois qu’il est émis.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "Pour acceder a cet outil on peut cliquer sur l'icon 'Outils' sur la barre latérale et choisir l'aerosol. On peur aussi y acceder en cliquant sur la touche 'A'. Il a comme attribut: ",
+        "points": "Nombre d’émissions par seconde",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "Diamètre du jet en pixels",
+        "link": "../assets/airBrush.png"
+          
+    }
+]

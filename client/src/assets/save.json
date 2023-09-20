@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Sauvegarde de dessin",
+        "description": "Demande un nom pour la sauvegarde du dessin. Celui-ci est sauvegardé sur le serveur de Polydessin. L’utilisateur peut aussi définir une ou plusieurs étiquettes (tags en anglais) associées à son dessin. Il y a une validation sur les étiquettes définies. L’usage des étiquettes est optionnel et l’utilisateur peut sauvegarder son dessin sans problème même s’il n’en spécifie aucune.",
+        "points": "",
+        "link": ""
+    }
+]

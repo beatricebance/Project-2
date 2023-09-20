@@ -1,0 +1,19 @@
+<h2 style="margin-left: 20px;">Couleur</h2 >
+    <div class="colorTool" style="margin: 20px;">
+        <div class="primaryColor">
+            <span class="colors-label-text">Couleur Primaire</span>
+            <button (click)="openDialogs()" class="primaryColorSwatch" [style.background-color] = "colorData.primaryColor"> </button>
+        </div>
+        <button (click)="colorData.swapingColors()" class="swapButton" mat-raised-button >
+            permuter
+        </button>
+        <div class="secondaryColor">
+            <span class="colors-label-text">Couleur secondaire</span>
+            <button (click)="openDialogs()" class="secondaryColorSwatch" [style.background-color] = "colorData.secondaryColor "> </button> 
+        </div>
+        <div class="backgroundColor">
+            <span class="colors-label-text">Couleur de fonds</span>
+            <button (click)="openDialogs()" class="primaryColorSwatch" [style.background-color] = "colorData.backgroundColor"> </button>
+        </div>
+        <button (click)="openDialogs()" mat-raised-button style="margin-left: 40px;"> selecteur de couleur </button>
+    </div>

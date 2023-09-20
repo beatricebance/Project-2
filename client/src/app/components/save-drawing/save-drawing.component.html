@@ -1,0 +1,51 @@
+<form [formGroup]="savingForm" class="form">
+    <div mat-dialog-content class="row">
+        <div class="column" style="width:100%">
+            <div class="form-group">
+                <label for="name" [ngClass]="savingForm.controls['name'].invalid ? 'text-danger' : ''">
+                    <h3>Nom: </h3>
+                </label>
+                <input type="text" formControlName="name"
+                    [ngClass]="savingForm.controls['name'].invalid ? 'is-invalid' : ''" class="form-control">
+                <label class="text-danger" *ngIf="savingForm.controls['name'].hasError('required')">
+                    Il est obligatoire de choisir un nom
+                </label>
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="tag" [ngClass]="savingForm.controls['tag'].invalid ? 'text-danger' : ''">
+                    <h3>Etiquette: </h3>
+                </label>
+
+                <input type="text" formControlName="tag"
+                    [ngClass]="savingForm.controls['tag'].invalid ? 'is-invalid' : ''" class="form-control">
+
+                <label class="text-danger" *ngIf="savingForm.controls['tag'].hasError('maxlength')">
+                    La longueur maximale est 6
+                </label>
+                <br>
+            </div>
+            <div class="btn_validation">
+                <button (click)="addTag()" mat-button>Ajout Liste Etiquette</button>&nbsp; &nbsp;
+                <button [disabled]="!this.isTagAdded" (click)="deleteTag()" mat-button>Vider Etiquettes</button>
+            </div><br>
+            <h4>Liste des Etiquettes: <ul>
+                    <li *ngFor="let tag of tagTable"> {{tag}}</li>
+                </ul>
+            </h4><br>
+            <button [disabled]="isTryingToSave" (click)="trySaving()" mat-button>Sauvegarder?</button> <br>
+            <div *ngIf="this.isTryingToSave ">
+                <div class="btn_validation" style="display: inline">
+                    <button (click)="save()">Valider</button> &nbsp;
+                    <button mat-dialog-close>Annuler</button>
+                </div>
+            </div>
+        </div>
+        <div class="column" style="height:500px; margin-top: 10px;">
+            <div class="box" style="height: 405px; width:405px ;">
+                <img [src]="this.safeUrl" style="height: 400px; width: 400px;">
+            </div>
+            <br>
+        </div>
+    </div>
+</form>

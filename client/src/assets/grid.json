@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Grille",
+        "description": "L’application permet d’afficher une grille superposée à la surface de dessin et de son contenu. Son point d’origine est le coin supérieur gauche de la surface. Il est possible d’activer ou désactiver la grille. Il a comme attribut: ",
+        "points": "La transparence",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "La taille (en pixels) des carrés de la grille",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "On peut activer ou déactiver l'affichage de la grille avec la touche 'G' ou en accédant a sa barre d'attribut a travers son icon sur la barre latérale. Il est aussi possible d'augmenter ou de diminuer la taille des carrés au prochain multiple de 5 avec les touches '+' et '-' respectivement.",
+        "points": "",
+        "link": ""
+          
+    }
+]

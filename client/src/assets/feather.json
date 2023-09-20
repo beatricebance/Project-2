@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Plume",
+        "description": "Cet outil ressemble lui aussi au crayon. Sa différence est dans la forme de sa pointe qui est une mince ligne plutôt que d’être ronde. Il est aussi possible de changer l’angle de la ligne à l’aide de la roulette de la souris. À chaque cran de roulette, une rotation de 15 degrés est effectuée. Si la touche Alt du clavier est maintenue enfoncée pendant cette action, la rotation sera plutôt de 1 degré. Il a comme attribut :",
+        "points": "Longueur en pixels de la ligne",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Angle d’orientation de la ligne en degrés",
+        "link": ""
+    }
+]

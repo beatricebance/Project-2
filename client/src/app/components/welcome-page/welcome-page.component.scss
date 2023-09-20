@@ -1,0 +1,209 @@
+body{
+    margin :0px;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    background-image: url("../../../assets/dragon-background.png");
+    background-position: center;
+    background-size: 42%;
+    background-attachment: fixed;
+}
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+
+.title {
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#logoPolyDessin{
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.createDrawingButton {
+    top: 60%;
+    left: 15%;
+    padding: 20px 40px;
+    background-color: rgb(109, 155, 155);
+}
+.drawingGalleryButton{
+    top: 60%;
+    left: 66%;
+    padding: 20px 60px;
+    background-color: rgb(109, 155, 155);
+}
+.continueDrawingButton{
+    top: 60%;
+    left: 39%;
+    padding: 20px 60px;
+    background-color: rgb(109, 155, 155);
+    border-radius: 10px;
+    border: 1px solid #1D1F20;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+    position: absolute;
+
+}
+
+.guideButton{
+    top: 5%;
+    left: 95%;
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px 12px;
+    color: white;
+    border: 1px solid #1D1F20;
+    background-color: rgb(109, 155, 155);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+
+    &:hover{
+        background-color: black;
+        cursor: pointer;
+    }
+}
+
+a:link, a:visited, button{
+    border-radius: 10px;
+    border: 1px solid #1D1F20;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+    position: absolute;
+
+    &:hover{
+        background-color: black;
+        cursor: pointer;
+    }
+    
+    &:active{
+        box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+    }
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media only screen and (max-width:1200px){
+    .createDrawingButton-tablet{
+        top: 50%;
+        left: 25%;
+        padding: 20px 209px;
+        float: left;
+        background-color: rgb(109, 155, 155);
+        position: absolute;
+        display: block;
+    }
+    .drawingGalleryButton-tablet{
+        top: 65%;
+        left: 25%;
+        padding: 20px 210px;
+        float: left;
+        background-color: rgb(109, 155, 155);
+        position: absolute;
+        display: block;
+    }
+
+    .continueDrawingButton-tablet{
+        top: 80%;
+        left: 25%;
+        padding: 20px 200px;
+        float: left;
+        background-color: rgb(109, 155, 155);
+        position: absolute;
+        display: block;
+    }
+
+    .guideButton{
+        top: 5%;
+        left: 95%;
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px 12px;
+        color: white;
+        border: 1px solid #1D1F20;
+        background-color: rgb(109, 155, 155);
+        box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+    
+        &:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width:800px){
+    .createDrawingButton-tablet{
+        top: 50%;
+        left: 25%;
+        padding: 10px 60px;
+        float: left;
+        background-color: rgb(109, 155, 155);
+        position: absolute;
+        display: block;
+    }
+    .drawingGalleryButton-tablet{
+        top: 60%;
+        left: 25%;
+        padding: 10px 63px;
+        float: left;
+        background-color: rgb(109, 155, 155);
+        position: absolute;
+        display: block;
+    }
+
+    .continueDrawingButton-tablet{
+        top: 70%;
+        left: 25%;
+        padding: 10px 53px;
+        float: left;
+        background-color: rgb(109, 155, 155);
+        position: absolute;
+        display: block;
+    }
+
+    .guideButton{
+        top: 3%;
+        left: 85%;
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px 12px;
+        color: white;
+        border: 1px solid #1D1F20;
+        background-color: rgb(109, 155, 155);
+        box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+    
+        &:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+    }
+}

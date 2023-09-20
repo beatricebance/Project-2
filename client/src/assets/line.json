@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Ligne",
+        "description": "Cet outil permet de tracer une ligne d’un ou plusieurs segments. Un premier clic définit la position de départ de la ligne. Ensuite, chaque clic qui suit « connecte » avec le clic qui le précède pour former un segment de la ligne.  Pendant le tracé, un segment temporaire est affiché en tout temps entre le pointeur de la souris et le dernier clic effectué pour donner un aperçu du prochain segment.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "Il est possible à l’utilisateur de facilement créer des segments alignés de sorte que l’angle entre eux et l’axe des x soit un multiple de 45 degrés. Si la touche Shift est enfoncée, le segment temporaire s’orienter selon l’un des angles suivants : 0, 45, 90, 135, 180, 225, 270 ou 315 degrés.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "Ce nouvel alignement reste en vigueur tant que la touche Shift est maintenue enfoncée. Dès que la touche est relâchée, le segment temporaire recommence à utiliser la position du pointeur de la souris pour son deuxième point.",
+        "points": "",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Un double-clic indique qu’il s’agit du dernier point. Un dernier segment est alors formé et la ligne est terminée. Pendant la construction d’une ligne, si la touche d’échappement (Escape) est appuyer, la totalité de la ligne est annulée. Si la touche de retour arrière (Backspace) est appuyer, le point le plus récent est supprimé. S’il s’agit du premier point, celui-ci n’est pas supprimé. Pour acceder a cette forme on peut cliquer sur l'icon 'Formes' sur la barre latérale et choisir la ligne. On peur aussi y acceder en cliquant sur la touche 'l'. Il a comme attribut : ",
+        "points": "Épaisseur de la ligne en pixels",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Diamètre des points de jonction (si l’option avec point est choisie)",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Type de jonction : ",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "Normal",
+        "points": "",
+        "link": "../assets/line1.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec point",
+        "points": "",
+        "link": "../assets/line2.png"
+          
+    }
+    
+
+]

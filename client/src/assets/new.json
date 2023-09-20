@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Nouveau dessin",
+        "description": "Affiche une fenêtre modale présentant un formulaire de configuration de nouveau de dessin où l’on y définit la largeur, la hauteur et la couleur d’arrière-plan de la surface à créer. Les champs pour la largeur et la hauteur sont préremplis avec les valeurs permettant de créer la plus grande surface de dessin possible. Autrement dit, une surface de dessin aux dimensions égales à celles de la zone de travail. Par défaut, l’arrière-plan est en blanc, mais l’utilisateur peut spécifier la couleur de son choix via une palette de couleurs. Tout comme pour la galerie, on peut créer un nouveau dessin soit à partie du point d'entré ou à partie de la vue de dessin",
+        "points": "",
+        "link": ""
+    }
+]

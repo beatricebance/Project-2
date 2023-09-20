@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Galerie de dessin",
+        "description": "Lorsqu'on y accède à travers la vue de dessin, une fenêtre modale présentant une liste de tous les dessins sauvegardés sur le serveur est afficher. Cette liste peut être filtrée en spécifiant une ou plusieurs étiquettes. Lorsqu’une ou plusieurs étiquettes sont sélectionnées, seulement les dessins qui contiennent au moins une des étiquettes sont visibles. Si aucune étiquette n’est choisie, tous les dessins sont visibles. Chaque élément de la liste comporte un nom, des étiquettes (s’il y en a), et une représentation du dessin en format réduit. L’utilisateur peut ouvrir (charger) un de ces dessins. Cette action fait afficher la vue de dessin qui présente le dessin décrit par le fichier chargé. L’utilisateur peut aussi supprimer un dessin de la liste. Tous les dessins sont publics. Un utilisateur peut donc ouvrir ou supprimer n’importe quel dessin. On peut aussi y accéder à partie du point d'entrée de l'application",
+        "points": "",
+        "link": ""
+    }
+]

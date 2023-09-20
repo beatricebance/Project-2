@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Exporter un dessin",
+        "description": "Offre de créer une image à partir de la surface de dessin et de l’exporter dans un des formats suivants : JPG, PNG ou SVG. L’utilisateur devra entrer un nom pour le fichier exporté.",
+        "points": "",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "S’il le souhaite, plutôt que de sauvegarder localement le dessin exporté, l’utilisateur peut l’envoyer par courriel. Dans un tel cas, l’utilisateur ne devra pas seulement fournir un nom de fichier, mais aussi un nom d’auteur et l’adresse du destinataire.",
+        "points": "",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "La fonctionnalité d’exportation permet aussi d’appliquer un filtre sur l’image avant que l’exportation ne soit effectuée. Une variété de cinq filtres différents est disponible. Bien qu’il y ait plusieurs filtres disponibles, il n'est possible que d’en appliquer un seul lors d’une exportation.",
+        "points": "",
+        "link": ""
+    }
+
+]

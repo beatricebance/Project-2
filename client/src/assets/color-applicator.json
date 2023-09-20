@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Applicateur de couleur",
+        "description": "Cet outil permet de changer la couleur d’un objet simplement en cliquant dessus. Un clic avec le bouton gauche sur un objet fera changer sa couleur pour la couleur principale. Un clic avec le bouton droit sur un objet fera changer la couleur de bordure, s’il en a une, pour la couleur secondaire. Un objet dessiné avec l’option Contour seulement est considéré comme vide, c’est-à-dire que les clics à l’intérieur de l’objet sont ignorés et il n’est possible que de changer la couleur de bordure.",
+        "points": "",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "Pour acceder a cet outil on peut cliquer sur son icon sur la barre latérale. On peur aussi y acceder en cliquant sur la touche 'R'",
+        "points": "",
+        "link": ""
+    }
+]

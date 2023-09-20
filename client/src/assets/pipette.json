@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Pippette",
+        "description": "Cet outil est utilisé pour saisir la couleur sous le pointeur de la souris. Un clic avec le bouton gauche assigne la couleur saisie à la couleur principale. Un clic avec bouton droit pour l’assigner à la couleur secondaire. La couleur saisie est celle du pixel sous le pointeur de la souris.",
+        "points": "",
+        "link": "../assets/pipette.png"
+    },
+
+    {
+        "name": "",
+        "description": "Pour acceder a cet outil on peut cliquer sur son icon sur la barre latérale. On peur aussi y acceder en cliquant sur la touche 'I'",
+        "points": "",
+        "link": ""
+    }
+]

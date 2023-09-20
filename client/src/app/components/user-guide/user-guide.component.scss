@@ -1,0 +1,115 @@
+mat-sidenav-content {
+    font-family: "Bitstream Vera Serif Bold", serif;
+    font-size: 1.5em;
+    height : 100vh;
+    }
+    mat-sidenav,mat-sidenav-content {
+      padding: 16px;
+    }
+    
+    mat-sidenav {
+      background-color:#eeedf1;
+      width: 300px;
+      padding-left: 0;
+    }
+    
+    .btn_down{
+      position: absolute;
+      bottom: 0;
+    }
+    
+    .box{
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    
+    .attributbar{
+      width: 300px;
+    
+    }
+  
+    .btn_closeguide{
+     top:0;
+     right:50px;
+     position: fixed;
+      cursor: pointer;
+  }
+  
+  .centerImage {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }
+  
+  .centerImageP {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .separator{
+      color:  rgb(156, 153, 153);
+  }
+  
+  .bold{
+      font-weight: 900;
+  }
+  
+  .bar {
+      text-align: left;
+      width: 100%;
+      background-color:#eeedf1;
+      padding: 16px;
+      font-size: 20px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      &:hover{
+          color: rgb(255, 255, 255); }
+  }
+  
+  .centerText{
+      text-align: center; 
+  }
+  
+  .previousButton{
+      left:320px;
+      position: fixed;
+      padding: 10px 19px;
+      bottom: 0;
+  
+  }
+  .commonButton{
+      bottom: 0;
+      color: rgb(0, 0, 0);
+      border: 1px solid #1D1F20;
+      background-color: rgb(209, 206, 206);
+      border-radius: 10px;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0px 9px rgb(51, 68, 47);
+      &:hover{
+          background-color: rgb(161, 161, 161);
+          
+      }
+  }
+  
+  .nextButton{
+      right: 10px;
+      position: fixed;
+      padding: 10px 25px;
+      bottom: 0;
+  }
+  
+  .imgBorder {
+      border: 10px solid rgb(185, 185, 185);
+      border-radius: 12px;
+   }
+  
+.imgBorderClose {
+  border-radius: 12px;
+}

@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Polygone",
+        "description": "L’outil de polygone fonctionne comme le rectangle et l'ellipse. Il permet toutefois à l’utilisateur de spécifier le nombre de côtés de la forme à dessiner. Pour acceder a cette forme on peut cliquer sur l'icon 'Formes' sur la barre latérale et choisir l'ellipse. On peur aussi y acceder en cliquant sur la touche '3'.",
+        "points": "",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "IL a comme attribut : ",
+        "points": "Épaisseur du trait de contour en pixels",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Nombre de côtés du polygone (de 3 à 12) ",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "Type de tracé: ",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Avec contour et intérieur",
+        "points": "",
+        "link": "../assets/polygone1.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec contour seulement",
+        "points": "",
+        "link": "../assets/polygone3.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Avec intérieur seulement",
+        "points": "",
+        "link": "../assets/polygone2.png"
+          
+    }
+]

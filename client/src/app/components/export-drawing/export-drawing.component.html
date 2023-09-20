@@ -1,0 +1,39 @@
+  <div mat-dialog-content class="row">
+    <div class="column" style="width:100%">
+      <h3>Nom du Dessin: </h3>
+      <input type="text" [(ngModel)]="drawingName" [value]=this.drawingName>
+      <mat-radio-group class="radio-group">
+        <h3> Filtres</h3>
+        <mat-radio-button class="radio-button" *ngFor="let filter of filters" [value]="filter"
+          (change)=" updateFilter($event)">
+          {{filter}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div class="btn">
+        <h3>Format: </h3>
+        <button (click)="saveAsJpeg()" mat-button>JPG</button>
+        <button (click)="saveAsPng()" mat-button>PNG</button>
+        <button (click)="saveAsSvg()" mat-button>SVG </button><br>
+      </div><br>
+      <label>
+        <h3>Envoie par email</h3>
+      </label>
+      <div>
+        <label>Email</label>
+        <input type="email"  name ="email" [(ngModel)]="this.emailAddress"  #email ="ngModel"  placeholder="halimabance@gmail.com"  required   pattern="^([a-zA-Z0-9-.]+)@([a-zA-Z0-9-.]+).([a-zA-Z]{2,5})$" />  
+        <div>
+          <label for="format">
+            <h3> Choisir le Format: </h3>
+          </label>
+          <input type="text" placeholder="jpeg/png/svg" [(ngModel)]="format"><br> <br> <br>
+          <div class="btn">
+            <button (click)="this.send()">Envoyer</button>
+            <button mat-dialog-close>Annuler</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column " style="width:100%">
+      <div class="box" style="height: 500; overflow:scroll;" [innerHTML]="this.safeSource"></div>
+    </div>
+  </div>

@@ -1,0 +1,44 @@
+<div class="table-responsive ">
+  <table class="table" style="border: none">
+    <thead>
+      <tr>
+        <td scope="col">
+          <mat-form-field class="chip-list">
+            <mat-chip-list #chipList>
+              Filtre:
+              <mat-chip *ngFor="let tag of filterservice.selectedTag" [selectable]="selectable" [removable]="removable"
+                (removed)="remove(tag)">
+                {{tag}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="" #tagInput [formControl]="tagCtrl" [matAutocomplete]="auto"
+                [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+              <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+                {{tag}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <button (click)="search()">Rechecher </button>&nbsp;
+          <button (click)="delete()">Supprimer</button><br><br><br>
+          <div *ngIf="this.needresponse">
+            <p style="font-weight: bold; color: red;">
+              {{filterservice.response}}
+            </p>
+          </div>
+        </td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let drawingdata of this.tabledrawingdata">
+      <tr>
+        <td *ngFor="let oneDrawing of object.keys(drawingdata)" style="display: inline-block;">
+          <img [src]="this.safe.transformUrl(drawingdata[oneDrawing].svgxml)" style="height: 150px; width: 150px;">
+          <p>Name: {{drawingdata[oneDrawing].name}}</p>
+          <p>Etiquettes: {{drawingdata[oneDrawing].tag}}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

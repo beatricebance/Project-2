@@ -1,0 +1,142 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        <div class="btn_up">
+            <mat-nav-list>
+                <button mat-flat-button class="bar" (click)="updateIndex(0)"> Bienvenue </button>
+                <mat-divider class="separator"></mat-divider>
+                <button mat-button class="bar bold" (click)="isToolHidden=!isToolHidden">
+                    Outils
+                </button>
+                <mat-divider class="separator"></mat-divider>
+                <div *ngIf="isToolHidden" >
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(1)"> Crayon </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(2)"> Pinceau </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(3)"> Pipette </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(4)"> Applicateur de couleur </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(5)"> Aerosol</button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(6)"> Plume</button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(7)"> Efface</button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(8)"> Sceau de peinture</button>
+                    <mat-divider class="separator"></mat-divider>
+                </div>
+
+                <button mat-button class="bar bold" (click)="isShapeHidden=!isShapeHidden">
+                    Formes
+                </button>
+                <mat-divider class="separator"></mat-divider>
+                <div *ngIf="isShapeHidden" >
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(9)"> Ligne </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(10)"> Rectangle </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(11)"> Ellipse </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(12)"> Polygone</button>
+                    <mat-divider class="separator"></mat-divider>
+                </div>
+                <mat-divider class="separator"></mat-divider>
+            
+                <button mat-button class="bar bold" (click)="isUtilitiesHidden=!isUtilitiesHidden">
+                    Utilitaires
+                </button>
+                <mat-divider class="separator"></mat-divider>
+                <div *ngIf="isUtilitiesHidden" >
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(13)"> Selection </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(14)"> Annuler/Refaire </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(15)"> Grille </button>
+                    <mat-divider class="separator"></mat-divider>
+                </div>
+
+                <button mat-button class="bar bold" (click)="isFilesHidden=!isFilesHidden">
+                    Fichiers
+                </button>
+                <mat-divider class="separator"></mat-divider>
+                <div *ngIf="isFilesHidden" >
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(16)"> Nouveau dessin</button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(17)"> Sauvegarde </button>
+                    <mat-divider class="separator"></mat-divider>
+                    <button mat-flat-button class="bar centerText" (click)="updateIndex(18)"> Exporter </button>
+                    <mat-divider class="separator"></mat-divider>
+                </div>
+
+                <button mat-flat-button class="bar" (click)="updateIndex(19)"> Continuer dessin </button>
+                <mat-divider class="separator"></mat-divider>
+
+                <button mat-flat-button class="bar" (click)="updateIndex(20)"> Galerie </button>
+                <mat-divider class="separator"></mat-divider>
+
+                <button mat-flat-button class="bar" (click)="updateIndex(21)"> Raccourcis clavier </button>
+                <mat-divider class="separator"></mat-divider>
+            </mat-nav-list>
+
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color:#ffffff;">
+            <button mat-icon-button class ="btn_closeguide imgBorderClose ">
+                <mat-icon  svgIcon="closeguide" (click)="previous()"></mat-icon>
+            </button>
+        <div *ngIf="this.index===0">
+            <img src="../../../assets/logo.png" alt="boo"   class="centerImage">
+            <mat-divider class="separator"></mat-divider>
+            <p>
+                Bienvenue dans le guide d'utilisation de Polydessin. À gauche, vous verez un panneau latéral contenant la liste de tous les sujets regroupés par catégorie et sur cette surface,
+                la présentation du contenu. Chaque catégorie, lorsque cliquée, révèle (ou masque) sa liste de sujets.
+                Lorsqu’un sujet est sélectionné, le contenu qui lui est associé est présenté dans la partie droite de la
+                page.
+            </p>
+        
+            <p>
+                Deux boutons de navigations se trouvent à la fin du contenu pour chaque sujet. Le bouton précédent pour
+                faire afficher le contenu du sujet précédent et le bouton suivant pour faire afficher le contenu du sujet
+                suivant.
+            </p>
+            <p>
+                Le bouton 'X' en haut a droite permet de fermer le guide et retourner à la page précédente.
+            </p>
+          <img src="../../../assets/guideImageBienvenue.png"  width="40%" height="auto" class="centerImageP">
+            
+        </div>
+
+        <div *ngIf="this.index >= 1">
+            <div *ngFor = "let element of guideList">
+                <div *ngIf="element.name">
+                    <h2 class = "bold">{{element.name}}</h2>
+                    <mat-divider class="separator"></mat-divider>
+                </div>   
+                
+                <div *ngIf="element.description">
+                    <br>
+                    <p>{{element.description}}</p>
+                </div>
+
+                <div *ngIf="element.points">
+                    <ul type="square">
+                        <li>{{element.points}}</li>
+                    </ul>
+                </div>
+               
+               <div *ngIf="element.link">
+                    <img src={{element.link}} class="imgBorder" alt="Image" style="width:700px;height:360px;">
+                </div>
+                
+            </div>
+        </div>
+        <div *ngIf="this.index >= 1">
+            <button class="previousButton commonButton" (click)="updatePrevious()">Précédent</button>
+        </div>
+        <div *ngIf="this.index < (this.nbElements)">
+            <button class="nextButton commonButton" (click)="updateNext()">Suivant</button>
+        </div>   
+    </mat-sidenav-content>
+</mat-sidenav-container>

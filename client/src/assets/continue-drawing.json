@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Continuer un dessin",
+        "description": "Cette fonctionnalité charge dans son état le plus récent, le dernier dessin ouvert dans l’application web avant que celle-ci n’ait été fermée. Premièrement, elle permet à un utilisateur de rapidement poursuivre son travail sans avoir à sauvegarder puis charger à nouveau le dessin à chaque fois. Ensuite, elle offre la possibilité de « récupérer » le dessin en cas de crash du système ou de l’application.",
+        "points": "",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "Lorsqu’un dessin est en cours d’édition, une sauvegarde automatique a lieu. La sauvegarde est locale, donc située sur l’appareil de l’utilisateur (ordinateur, tablette, etc.). À chaque fois qu’un des trois évènements suivants a lieu, une sauvegarde automatique est déclenchée juste après :",
+        "points": "La création d’un dessin",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "L’ouverture (chargement) d’un dessin",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "La modification du dessin en cours d’édition",
+        "link": ""
+    }
+]

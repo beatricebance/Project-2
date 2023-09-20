@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Sceau de peinture",
+        "description": "Lorsque l’on clique sur la surface de dessin avec l’outil, la couleur du pixel sous le pointeur de la souris est saisie. Une « région » est définie avec ce premier pixel. À partir de ce point, un algorithme vérifie la couleur des voisins (gauche, droite, bas, haut) de ce pixel. Chaque pixel qui partage sa couleur est ajouté à la région. Ensuite, pour chaque nouveau pixel ajouté, la même vérification est effectuée. La routine est répétée ainsi jusqu’à ce qu’il n’y ait plus de pixel à vérifier. En résumé, une région de pixels connectés (voisins) qui partagent une même couleur est établie. Il a comme attribut: ",
+        "points": "Tolérance en pourcentage: Dans certains cas, on voudra utiliser l’outil sceau de peinture sur une section d’image qui n’est pas de couleur uniforme Lors de la comparaison de couleur des pixels voisins, l’algorithme de création de la région devra pouvoir tolérer les variations de couleur. C’est ici qu’entre en jeu l’attribut de tolérance. Un pourcentage de zéro indique aucune tolérance : seuls les pixels de la bonne couleur sont ajoutés la région. Plus le pourcentage monte, plus l’écart de couleur toléré est grand. Un pourcentage de 100 indique une tolérance totale. C’est-à-dire que toutes les couleurs sont acceptées. Il en résulte donc d’une région égale à l’entièreté de la surface de dessin.",
+        "link": ""
+    }
+]

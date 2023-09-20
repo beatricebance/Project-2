@@ -1,0 +1,257 @@
+[
+    {
+        "name": "Outils",
+        "description": "",
+        "points": "A : Aérosol",
+        "link": ""
+          
+    },
+    {
+        "name": "",
+        "description": "",
+        "points": "B : Sceau de peinture",
+        "link": ""
+    },
+    
+    {
+        "name": "",
+        "description": "",
+        "points": "C : Crayon",
+        "link": ""
+    },
+
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "E : Efface",
+        "link": ""
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "I : Pipette",
+        "link": ""
+          
+    },
+
+
+    {
+        "name": "",
+        "description": "",
+        "points": "L : Ligne",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "P : Plume",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "R : Applicateur de Couleur",
+        "link": ""
+          
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "W : Pinceau",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "1 : Rectangle",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "2 : Ellipse",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "3 : Polygone",
+        "link": ""
+  
+    },
+
+    {
+        "name": "Sélection et Manipulation de sélection",
+        "description": "",
+        "points": "S : Sélection",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "Supprimer : Supprimer la sélection",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + A : Tout sélectionner",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + X : Couper la sélection",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + C : Copier la sélection",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + V : Coller la sélection",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + D : Dupliquer la sélection ",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "<- : Déplacement vers la gauche",
+        "link": ""
+  
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "-> : Déplacement vers la droite",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "(Flèche vers le haut): Déplacement vers le haut",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "(Flèche vers le bas): Déplacement vers le bas",
+        "link": ""
+  
+    },
+
+    {
+        "name": "Option de la surface de déssin",
+        "description": "",
+        "points": "CTRL + Z : Annuler",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + SHIFT + Z : Refaire",
+        "link": ""
+  
+    },
+
+
+    {
+        "name": "",
+        "description": "",
+        "points": "G : Activer/Déactiver la grille",
+        "link": ""
+  
+    },
+
+
+    {
+        "name": "",
+        "description": "",
+        "points": " - : Diminuer la taille de la grille au prochain multiple de 5",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": " + : Augmenter la taille de la grille au prochain multiple de 5",
+        "link": ""
+  
+    },
+
+    {
+        "name": "Options de fichiers",
+        "description": "",
+        "points": "CTRL + O : Créer un nouveau dessin",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + E : Exporter le dessin",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + G : Voir la galerie de dessin",
+        "link": ""
+  
+    },
+
+    {
+        "name": "",
+        "description": "",
+        "points": "CTRL + S : Sauvegarder le dessin",
+        "link": ""
+  
+    }
+]

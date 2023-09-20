@@ -1,0 +1,29 @@
+.btn{
+   display: block;
+   cursor: pointer;
+   padding: 0;
+   margin: 0;
+  }
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+.radio-button {
+    margin: 5px;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+.box {
+  border: solid;
+  border-color: darken($color: #000000, $amount: 0);
+}

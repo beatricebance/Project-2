@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Crayon",
+    "description": "Il sert à faire de simples traits sans texture particulière. il a comme attribut :",
+    "points": "Épaisseur du trait en pixels",
+    "link": ""
+  },
+  {
+    "name": "",
+    "description": "Pour acceder a cet outil on peut cliquer sur l'icon 'Outils' sur la barre latérale et choisir le crayon. On peur aussi y acceder en cliquant sur la touche 'C'",
+    "points": "",
+    "link": "../assets/crayon.png"
+  }
+
+]

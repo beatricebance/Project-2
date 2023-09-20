@@ -1,0 +1,414 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened >
+    <div>
+      <div>
+        <button mat-icon-button title="Accueil" routerLink="/">
+          <mat-icon svgIcon="home" ></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Sélection">
+          <mat-icon svgIcon= "selection" (click)="activateTool(drawingData.selectorIndex)"></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Grille">
+          <mat-icon svgIcon= "grid" (click)="activateTool(drawingData.gridIndex)"></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Outils">
+          <mat-icon svgIcon= "tools" (click)="activateTools()"></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Formes">
+          <mat-icon svgIcon= "shapes" (click)="activateShapes()"></mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-icon-button title="Efface">
+          <mat-icon svgIcon="eraser" (click)="activateTool(drawingData.eraseIndex)"></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Applicateur de couleur">
+          <mat-icon svgIcon="color" (click)="activateTool(drawingData.colorAplicatorIndex)"></mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-icon-button title="Pipette">
+          <mat-icon svgIcon="pipette" (click)="activateTool(drawingData.pipetteIndex)"> </mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-icon-button title="Sceau de peinture">
+          <mat-icon svgIcon= "bucket" (click)="activateTool(drawingData.paintBucketIndex)"></mat-icon>
+        </button>
+      </div>
+      <div *ngIf="drawingParameters.canUndo">
+        <button mat-icon-button title="Annuler">
+          <mat-icon svgIcon= "undo" (click)="undo()"></mat-icon>
+        </button>
+      </div>
+      <div  *ngIf="drawingParameters.canRedo">
+        <button mat-icon-button title="Refaire">
+          <mat-icon svgIcon= "redo" (click)="redo()"></mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="btn_down">
+      <div >
+        <button mat-icon-button title="Nouveau">
+          <mat-icon svgIcon="add" (click)="this.openDialogService.openDialog()" ></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Sauvegarder" (click)="this.openDialogSaveDrawing()">
+          <mat-icon svgIcon="save"></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Galerie" (click)="openDialogDrawingGallery()">
+          <mat-icon svgIcon="folder"></mat-icon>
+        </button>
+      </div>
+      <div >
+        <button mat-icon-button title="Exporter" (click)="this.openDialogExport()">
+          <mat-icon svgIcon="export"></mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-icon-button title="Guide">
+          <mat-icon svgIcon="help" routerLink="/userguide"></mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="outils_bar">
+
+    </div>
+  </mat-sidenav>
+  <mat-sidenav class="attributbar" position="end" mode="side" [(opened)]="opened">
+    <div id="btn_up_1_left">
+      <button mat-icon-button  (click)="opened=!opened">
+        <mat-icon svgIcon="close"></mat-icon>
+      </button>
+    </div>
+    <div  *ngIf="drawingParameters.toolsOn">
+      <h1>OUTILS</h1>
+      <div class="btn_up">
+        <button mat-icon-button title="Crayon">
+          <mat-icon svgIcon="pencil" (click)="activateTool(drawingData.pencilIndex) "></mat-icon>
+        </button>
+      </div>
+      <div class="btn_up">
+        <button mat-icon-button title="Pinceau">
+          <mat-icon svgIcon="brush" (click)="activateTool(drawingData.brushIndex)"> ></mat-icon>
+        </button>
+      </div>
+      <div class="btn_up">
+        <button mat-icon-button title="Aerosol">
+          <mat-icon svgIcon="spray" (click)="activateTool(drawingData.airBrushIndex)"> </mat-icon>
+        </button>
+      </div>
+      <div class="btn_up">
+        <button mat-icon-button title="Plume">
+          <mat-icon svgIcon="feather" (click)="activateTool(drawingData.calligraphyIndex)"> </mat-icon>
+        </button>
+      </div>
+
+    </div>
+    <div  *ngIf="drawingParameters.shapesOn">
+      <h1>FORMES</h1>
+      <div class="btn_up">
+        <button mat-icon-button title="Ligne">
+          <mat-icon svgIcon="line" (click)="activateTool(drawingData.lineIndex)"></mat-icon>
+        </button>
+      </div>
+      <div class="btn_up">
+        <button mat-icon-button title="Rectangle">
+          <mat-icon svgIcon="rec" (click)="activateTool(drawingData.rectangleIndex)"></mat-icon>
+        </button>
+      </div>
+      <div class="btn_up">
+        <button mat-icon-button title="Ellipse">
+          <mat-icon svgIcon="ellipse" (click)="activateTool(drawingData.ellipseIndex)"></mat-icon>
+        </button>
+      </div>
+      <div class="btn_up">
+        <button mat-icon-button title="Polygone">
+          <mat-icon svgIcon="polygone" (click)="activateTool(drawingData.polygoneIndex)"></mat-icon>
+        </button>
+      </div>
+    </div>
+    <table *ngIf="drawingParameters.drawablesOn">
+      <hr>
+
+      <!-- partie crayon -->
+      <table class="table" *ngIf="isActivetools[drawingData.pencilIndex]">
+        <h2>Crayon</h2>
+        <mat-divider class="separator"></mat-divider>
+        Epaisseur :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="true" [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+      </table>
+
+      <!-- partie pinceau -->
+      <table class="table" *ngIf="isActivetools[drawingData.brushIndex]">
+        <h2>Pinceau</h2>
+        <mat-divider class="separator"></mat-divider>
+        Epaisseur :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel"
+          [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.filterState">
+          Filtres
+          <mat-radio-button class="radio-button" *ngFor="let filter of filters" [value]="filter"
+            (change)=" updateFilter($event)">
+            {{filter}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </table>
+
+      <!-- partie ligne -->
+      <table class="table" *ngIf="isActivetools[drawingData.lineIndex]">
+        <h2>Ligne</h2>
+        <mat-divider class="separator"></mat-divider>
+          Epaisseur :
+          <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel"
+            [(ngModel)]="sliderParameters.value">
+          </mat-slider>{{this.sliderParameters.value}} px
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.junctionState">
+          Type de jonctions:
+          <mat-radio-button class="radio-button" *ngFor="let junction of junctionType" [value]="junction"
+          (change)=" updateJunction($event)">
+            {{junction}}
+          </mat-radio-button>
+        </mat-radio-group>
+        Rayon :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel" [disabled]="drawingParameters.disableJunction"
+          [(ngModel)]="sliderParameters.junctionWidth">
+        </mat-slider>{{this.sliderParameters.junctionWidth}} px
+      </table>
+
+      <!-- partie rectangle -->
+      <table class="table" *ngIf="isActivetools[drawingData.rectangleIndex]">
+        <h2>Rectangle</h2>
+        <mat-divider class="separator"></mat-divider>
+        Epaisseur :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel"
+          [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.contourState">
+          CONTOUR
+          <mat-radio-button class="radio-button" *ngFor="let contour of contours" [value]="contour"
+            (change)=" updateContour($event)">
+            {{contour}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.filled">
+          INTERIEUR
+          <mat-radio-button class="radio-button" *ngFor="let fill of fills" [value]="fill"
+            (change)=" updateFill($event)">
+            {{fill}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+      </table>
+
+      <!-- partie Aerosol -->
+      <table class="table" *ngIf="isActivetools[drawingData.airBrushIndex]">
+        <h2>Aerosol</h2>
+        <mat-divider class="separator"></mat-divider>
+        Diametre :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="true" [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+        Emission :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="true" [(ngModel)]="drawingParameters.airBrushEmission">
+        </mat-slider>{{this.drawingParameters.airBrushEmission}} s
+      </table>
+
+      <!-- partie Plume -->
+      <table class="table" *ngIf="isActivetools[drawingData.calligraphyIndex]">
+        <h2>Plume</h2>
+        <mat-divider class="separator"></mat-divider>
+        Longueur :
+        <mat-slider class="example-margin" [max]="sliderParameters.maxSizeCalligraphy" [min]="sliderParameters.minSizeCalligraphy" [step]="sliderParameters.step" [thumbLabel]="true" [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+        <div>
+          Angle :
+          <mat-slider class="example-margin" [max]="sliderParameters.maxCalligraphy" [min]="sliderParameters.minCalligraphy" [step]="sliderParameters.step" [thumbLabel]="true" [(ngModel)]="sliderParameters.angleCalligraphy">
+          </mat-slider>{{this.sliderParameters.angleCalligraphy}} °
+        </div>
+      </table>      
+
+      <!-- partie polygone -->
+      <table class="table" *ngIf="isActivetools[drawingData.polygoneIndex]">
+        <h2>Polygone</h2>
+        <mat-divider class="separator"></mat-divider>
+        Epaisseur :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel"
+          [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+
+        Sommets :
+        <mat-slider class="example-margin" [max]="sliderParameters.maxSides" [min]="sliderParameters.minSides" [step]="sliderParameters.step" [thumbLabel]="true" [(ngModel)]="sliderParameters.polygoneSides"  (change)="OnSideChange()">
+        </mat-slider>{{this.sliderParameters.polygoneSides}}
+
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.contourState">
+          CONTOUR
+          <mat-radio-button class="radio-button" *ngFor="let contour of contours" [value]="contour"
+            (change)=" updateContour($event)">
+            {{contour}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.filled">
+          INTERIEUR
+          <mat-radio-button class="radio-button" *ngFor="let fill of fills" [value]="fill"
+            (change)=" updateFill($event)">
+            {{fill}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </table>
+
+      <!-- partie Ellipse -->
+      <table class="table" *ngIf="isActivetools[drawingData.ellipseIndex]">
+        <h2>Ellipse</h2>
+        <mat-divider class="separator"></mat-divider>
+        Epaisseur :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel"
+          [(ngModel)]="sliderParameters.value">
+        </mat-slider>{{this.sliderParameters.value}} px
+
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.contourState">
+          CONTOUR
+          <mat-radio-button class="radio-button" *ngFor="let contour of contours" [value]="contour"
+            (change)=" updateContour($event)">
+            {{contour}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.filled">
+          INTERIEUR
+          <mat-radio-button class="radio-button" *ngFor="let fill of fills" [value]="fill"
+            (change)=" updateFill($event)">
+            {{fill}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </table>
+
+      <!-- partie grille -->
+      <table class="table" *ngIf="isActivetools[drawingData.gridIndex]">
+          <h2>Grille</h2>
+          <mat-divider class="separator"></mat-divider>
+
+          <mat-radio-group class="radio-group" [(ngModel)]="sliderParameters.grid">
+            Affichage de la grille :
+            <mat-radio-button class="radio-button" *ngFor="let grid of grids" [value]="grid"
+            (change)="activateGrid()">
+            {{grid}}
+            </mat-radio-button>
+          </mat-radio-group>
+        Taille :
+        <mat-slider (input)= "this.gridTool.grid(this.container,this.sliderParameters.valueDecimal, $event.value)" class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.minGrid" [step]="sliderParameters.step5"
+          [thumbLabel]="drawingData.thumbLabel" [disabled]="drawingParameters.disableGrid" [(ngModel)]="drawingData.space">
+        </mat-slider> {{this.drawingData.space}} px
+        <div>
+          Opacite :
+          <mat-slider (input)= "this.gridTool.grid(this.container, $event.value, this.drawingData.space)" class="example-margin" [max]="sliderParameters.maxDecimal" [min]="sliderParameters.minDecimal" [step]="sliderParameters.stepDecimal"
+            [thumbLabel]="true" [disabled]="drawingParameters.disableGrid" [(ngModel)]="sliderParameters.valueDecimal">
+          </mat-slider> {{this.sliderParameters.valueDecimal}}
+        </div>
+      </table>
+
+      <!-- partie erase -->
+      <table class="table" *ngIf="isActivetools[drawingData.eraseIndex]">
+        <h2>Efface</h2>
+        <mat-divider class="separator"></mat-divider>
+        Taille :
+        <mat-slider (input)= "this.eraseTool.eraseInput($event.value)" class="example-margin" [max]="sliderParameters.maxErase" [min]="sliderParameters.minErase" [step]="sliderParameters.step"
+          [thumbLabel]="drawingData.thumbLabel"  [(ngModel)]="sliderParameters.value">
+        </mat-slider> {{this.sliderParameters.value}} px
+      </table>
+
+     <!-- partie selection -->
+      <table class="table" *ngIf="isActivetools[drawingData.selectorIndex]">
+        <h2>Selection</h2>
+        <button class="button" (click)="selectionTool.cut()"> Couper </button>
+        <button class="button" (click)="selectionTool.copy()"> Copier</button>
+        <button class="button" (click)="selectionTool.paste()"> Coller</button>
+        <button class="button" (click)="selectionTool.duplicate()"> Dupliquer</button>
+        <button class="button" (click)="selectionTool.delete()"> Supprimer</button>
+        <button class="button" (click)="selectionTool.selectAll()"> Tout sélectionner</button>
+      </table>
+
+      <!-- partie Applicateur de Coleur -->
+      <table class="table" *ngIf="isActivetools[drawingData.colorAplicatorIndex]">
+        <h2>Applicateur de Couleur</h2>
+        <mat-divider class="separator"></mat-divider>
+      </table>
+
+      <!-- partie Sceau de peinture -->
+      <table class="table" *ngIf="isActivetools[drawingData.paintBucketIndex]">
+        <h2>Sceau de peinture</h2>
+        <mat-divider class="separator"></mat-divider>
+        Tolerance :
+        <mat-slider class="example-margin" [max]="sliderParameters.max" [min]="sliderParameters.min" [step]="sliderParameters.step" [thumbLabel]="drawingData.thumbLabel"
+        [(ngModel)]="sliderParameters.value"  (change)="updateTolerance($event)">
+        </mat-slider> {{this.sliderParameters.value}} %
+      </table>
+
+      <div *ngIf="!selectorOn" >
+        <app-color-picker-modal></app-color-picker-modal>
+      </div>
+
+    </table>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div  #box id ="box" class="box">
+      <svg #svgContainer 
+        [style.background-color]="this.viewDrawingParameter.svgColorHexa"
+        [attr.height.px]="this.viewDrawingParameter.svgHeight"
+        [attr.width.px]="this.viewDrawingParameter.svgWidth" (mousemove)="draw($event)"
+        (mousedown)="beginDrawing($event)" (mouseup)="stopDrawing($event)" (mouseleave)="stopDrawing($event)"
+        (dblclick)="doubleClick($event)" (document:keydown.escape)="onEscape()" (document:keydown.backspace)="onBackspace()" (click)="click($event)"
+        (document:keydown.shift)="shiftDown($event)" (document:keyup.shift)="shiftUp($event)"
+       
+        filter=" ">
+        <defs>
+          <filter filterUnits="userSpaceOnUse" x="0px" y="0px" width="100%" height="100%" id="normal">
+            <feGaussianBlur stdDeviation="0" />
+          </filter>
+          <filter filterUnits="userSpaceOnUse" x="0px" y="0px" width="100%" height="100%" id="spray">
+            <feTurbulence type="fractalNoise" baseFrequency="0.25" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="10" />
+          </filter>
+          <filter filterUnits="userSpaceOnUse" x="0px" y="0px" width="100%" height="100%" id="emboss">
+            <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -3" />
+          </filter>
+          <filter filterUnits="userSpaceOnUse" x="0px" y="0px" width="100%" height="100%" id="displacementFilter">
+            <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter  xfilterUnits="userSpaceOnUse" x="0px" y="0px" width="100%" height="100%" id="blur9">
+            <feGaussianBlur stdDeviation="8" />
+          </filter>
+          <filter filterUnits="userSpaceOnUse" id="Dilate">
+            <feMorphology operator="dilate" in="SourceGraphic" radius="6" />
+          </filter>
+          <filter x="0px" y="0px" width="100%" height="100%" id="translucide">
+            <feComponentTransfer>
+              <feFuncA type="table" tableValues="0 0.3"></feFuncA>
+           </feComponentTransfer>
+          </filter>
+        </defs>
+
+        <!-- <rect width="100%" height="100%" [attr.fill]="this.viewDrawingParameter.svgColorHexa"/> -->
+
+       
+      </svg>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,48 @@
+.custom-dialog-container .mat-dialog-content{
+    overflow: hidden !important;
+    width: fitcontent !important;
+    height: fitcontent !important;
+    display: contents !important;
+}
+
+.custom-dialog-container .mat-dialog-container{
+    padding: unset !important;
+    overflow: unset !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 10px;
+}
+.colorTool{
+    width: 200px;
+
+}
+.primaryColorSwatch, .secondaryColorSwatch, .backgroundColorSwatch{
+    border-radius: 100%;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.14);
+    height: 30px;
+    width: 30px;
+    border: 1px solid  black;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.colors-label-text {
+    float: left;
+    width: 150px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.primaryColor, .secondaryColor, .backgroundColor{
+    width: 200px;
+    float: left;
+}
+
+.swapButton{
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+}

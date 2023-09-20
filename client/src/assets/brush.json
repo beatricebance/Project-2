@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Pinceau",
+        "description": "Cet outil est similaire au crayon. L’application offre cinq textures différentes. Pour acceder a cet outil on peut cliquer sur l'icon 'Outils' sur la barre latérale et choisir le pincau. On peur aussi y acceder en cliquant sur la touche 'W'. Il a comme attribut: ",
+        "points": "Épaisseur du trait en pixels",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "",
+        "points": "Texture du trait",
+        "link": ""
+    },
+  
+    {
+        "name": "",
+        "description": "On a le filtre 'Normal'",
+        "points": "",
+        "link": "../assets/filtre1.png"
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Nous avons le filtre 'spray'",
+        "points": "",
+        "link": "../assets/filtre2.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Le filtre 'Emboss'",
+        "points": "",
+        "link": "../assets/filtre3.png"
+  
+    },
+  
+    {
+        "name": "",
+        "description": "Le filtre de déplacement",
+        "points": "",
+        "link": "../assets/filtre4.png"
+          
+    },
+
+    {
+        "name": "",
+        "description": "Et enfin le filtre qui donne un effet flou",
+        "points": "",
+        "link": "../assets/filtre5.png"
+          
+    }
+]

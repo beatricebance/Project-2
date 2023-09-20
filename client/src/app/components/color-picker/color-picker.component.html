@@ -1,0 +1,58 @@
+
+<div class="formBoxes" style="margin-top: 70px;">
+    <div [formGroup]="colorForm">
+        
+        <mat-form-field style="width: 75px; margin-top: 10px;">
+            <mat-label>a primaire</mat-label>
+            <input  style="width: 75px;" formControlName="a"  matInput [(ngModel)]="aValue" (change)="addAlpha(aValue)"/>
+        </mat-form-field>
+        <mat-form-field style="width: 75px; margin-top: 10px;">
+            <mat-label>a secondaire</mat-label>
+            <input  style="width: 75px;" formControlName="a"  matInput [(ngModel)]="aValueSecondary" (change)="addAlpha(aValueSecondary)"/>
+        </mat-form-field>
+    </div>
+    <div class="swappingColors">
+        <!-- couleur primaire -->
+        <div class="rgbaSwatch" [style.background-color] = "colorData.primaryColor"></div>
+        <!-- couleur secondaire -->
+        <div class="rgbaSwatch" [style.background-color] = "colorData.secondaryColor"></div>
+        <button (click)="swapColors()" class="swapButton" mat-raised-button style="background-color: rgb(109, 155, 155);">
+            permuter
+        </button>
+    </div>
+    <mat-form-field style="width: 75px; text-align: center;  margin-top: 10px;">
+        <mat-label>#ffffff</mat-label>
+        <input  style="width: 75px;" matInput [(ngModel)]="colorData.hexColor">
+    </mat-form-field>
+</div>
+
+<div class="rgbaBox">
+    <canvas #canvas  
+        class="color-picker" 
+        height="195" 
+        width="205" 
+        (mousedown) = "onMouseDown($event)" 
+        (mousemove) = "onMouseMove($event)"
+        (mouseup) = "onMouseUp()">
+    </canvas>
+    <mat-form-field class="text" style="margin-left: 10px;">
+        <mat-label>rgb(r, g, b)</mat-label>
+        <input  matInput [(ngModel)]="rgbaColor" name="color-input"/>
+    </mat-form-field>
+    <div class="rgbaSwatch" style="float: left;" [style.background-color] = "rgbaColor"> </div> 
+    <div >
+        <button (click)="colorIsSaved()" mat-raised-button style="float: right; margin-top: 5px;" >ok</button>
+    </div>
+    <div >
+        <button (click)="backgroundIsSaved()" mat-raised-button style="float: left; margin-top: 5px; background-color: black; color: white;">
+            couleur de fonds
+        </button>
+    </div>
+    <div class="rgbaSwatch" style="float: right;" [style.background-color] = "colorData.backgroundColor"> </div> 
+</div>
+
+<div class="colorsSaved" #recentColors>
+    <div class="rgbaSwatchOptions" *ngFor="let color of colorData.top10RecentColors"> 
+        <span [style.background-color] = "color"></span>
+    </div> 
+</div>

@@ -1,0 +1,78 @@
+export enum ToolsIndex {
+    PENCIL_INDEX = 0,
+    BRUSH_INDEX = 1,
+    RECTANGLE_INDEX = 2,
+    LINE_INDEX = 3,
+    AIR_BRUSH_INDEX = 4,
+    POLYGONE_INDEX = 5,
+    ELLIPSE_INDEX = 6,
+    ERASE_INDEX = 7,
+    SELECTION_INDEX = 8,
+    PIPETTE_INDEX = 9,
+    COLOR_APPLICATOR_INDEX = 10,
+    GRID_INDEX = 11,
+    PAINT_BUCKET_INDEX = 12,
+    CALLIGRAPHY_INDEX = 13
+}
+
+export enum SvgAttributes {
+    PATH = 'path',
+    POLYLINE = 'polyline',
+    CIRCLE = 'circle',
+    LINK = 'http://www.w3.org/2000/svg',
+    G = 'g',
+    RECT = 'rect',
+    ELLIPSE = 'ellipse',
+    LINE = 'line',
+    STRING = 'svg',
+    STROKE = 'stroke',
+    FILL = 'fill',
+    TRANSPARENT = 'transparent',
+    HEIGHT = 'height',
+    WIDTH = 'width',
+    STROKE_WIDTH = 'stroke-width'
+}
+
+export enum keyBoardEvents {
+    EVENT_KEY_O = 'o' ,
+    EVENT_KEY_1 = '1' ,
+    EVENT_KEY_2 = '2' ,
+    EVENT_KEY_3 = '3' ,
+    EVENT_KEY_W = 'w' ,
+    EVENT_KEY_C = 'c' ,
+    EVENT_KEY_B = 'b' ,
+    EVENT_KEY_L = 'l' ,
+    EVENT_KEY_Z = 'z' ,
+    EVENT_KEY_SHIFT_Z = 'Z' ,
+    EVENT_KEY_A = 'a' ,
+    EVENT_KEY_S = 's' ,
+    EVENT_KEY_E = 'e' ,
+    EVENT_KEY_P = 'p' ,
+    EVENT_KEY_T = 't' ,
+    EVENT_KEY_R = 'r' ,
+    EVENT_KEY_D = 'd' ,
+    EVENT_KEY_I = 'i' ,
+    EVENT_KEY_G = 'g' ,
+    EVENT_KEY_X = 'x' ,
+    EVENT_KEY_V = 'v' ,
+    EVENT_KEY_DELETE = 'Delete' ,
+    EVENT_KEY_MINUS = '-' ,
+    EVENT_KEY_PLUS = '='
+}
+
+export enum SliderParameters {
+    MAX_SLIDER = 100,
+    MIN_SLIDER = 0,
+    MIN_SLIDER_GRID = 5,
+    MAX_SIDES = 12,
+    MAX_DECIMAL_SLIDER = 1,
+    MIN_DECIMAL_SLIDER = 0.1,
+    MIN_SIDES = 3,
+    SLIDER_STEP = 1,
+    SLIDER_STEP_5 = 5,
+    SLIDER_DECIMAL_STEP = 0.1,
+    VALUE = 5,
+    VALUE_DECIMAL = 0.4,
+    MAX_CALLIGRAPHY = 360,
+    MIN_CALLIGRAPHY = 0,
+}
